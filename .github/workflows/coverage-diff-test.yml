@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  GH_TOKEN: ${{ github.token }}
+  GITHUB_REPOSITORY: ${{ github.repository }}
+
 jobs:
   coverage-diff-comment:
     runs-on: ubuntu-latest
@@ -35,11 +39,10 @@ jobs:
         shell: bash
 
       - name: 💬 Jest Coverage Comment
-        uses: aviralpostman/jest-coverage-comment-aviral-fork@coverage-diff-wrt-to-main-branch
+        uses: aviralpostman/jest-coverage-comment-aviral-fork@main
         with:
           title: Test code coverage
           coverage-summary-path: coverage/coverage-summary.json
-          netCoverageMain: ${{ env.NET_COVERAGE_BASELINE }}
 
       - name: Get main branch name
         run: |
