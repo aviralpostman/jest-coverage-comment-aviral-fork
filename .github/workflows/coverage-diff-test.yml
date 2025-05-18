@@ -39,7 +39,7 @@ jobs:
         shell: bash
 
       - name: 💬 Jest Coverage Comment
-        uses: aviralpostman/jest-coverage-comment-aviral-fork@coverage-diff-wrt-to-main-branch
+        uses: aviralpostman/jest-coverage-comment-aviral-fork@main
         with:
           title: Test code coverage
           coverage-summary-path: coverage/coverage-summary.json
