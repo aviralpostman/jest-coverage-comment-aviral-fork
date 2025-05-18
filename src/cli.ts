@@ -77,7 +77,7 @@ async function main(): Promise<void> {
       },
       multipleFiles,
       multipleJunitFiles,
-      netCoverageMain: '0',
+      netCoverageMain: '',
     }
 
     const { summaryHtml } = getSummaryReport(options)

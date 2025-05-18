@@ -55,7 +55,7 @@ describe('parse summary', () => {
     prefix: '',
     badgeTitle: 'Net Coverage',
     summaryFile: `${__dirname}/../data/coverage_1/coverage-summary.json`,
-    netCoverageMain: '0',
+    netCoverageMain: '',
   }
 
   test('should return summary report', () => {
@@ -124,7 +124,7 @@ describe('summary to markdown', () => {
     prefix: '',
     badgeTitle: 'Coverage',
     summaryFile: `${__dirname}/../data/coverage_1/coverage-summary.json`,
-    netCoverageMain: '0',
+    netCoverageMain: '',
   }
   const jsonContent = getContentFile(options.summaryFile)
   const summary = parseSummary(jsonContent)
@@ -162,7 +162,7 @@ describe('coverage when have default values', () => {
     badgeTitle: 'Coverage',
     summaryFile: './coverage/coverage-summary.json',
     multipleFiles: ['Title1, some/path/to/file/coverage.json'],
-    netCoverageMain: '0',
+    netCoverageMain: '',
   }
 
   test('should ignore warning when summaryFile have default value and have multiple-files', () => {
